@@ -111,6 +111,14 @@
     .ccr-download-meta { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 300; line-height: 1.5; }
     .ccr-download-arrow { margin-left: auto; font-size: 20px; color: var(--brass-light); flex-shrink: 0; }
     .ccr-doc-note { font-size: 13px; color: var(--stone); margin-top: 12px; font-weight: 300; line-height: 1.6; }
+    .ccr-doc-list { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .ccr-doc-row { display: flex; align-items: center; gap: 16px; padding: 15px 18px; background: var(--warm-white); text-decoration: none; border-bottom: 1px solid var(--border); transition: background 0.2s; }
+    .ccr-doc-row:last-child { border-bottom: none; }
+    .ccr-doc-row:hover { background: var(--cream); }
+    .ccr-doc-year { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; color: var(--brass); width: 34px; flex-shrink: 0; text-align: center; line-height: 1.2; }
+    .ccr-doc-row-title { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 3px; }
+    .ccr-doc-row-meta { font-size: 12px; color: var(--stone); font-weight: 300; line-height: 1.5; }
+    .ccr-doc-row-arrow { margin-left: auto; color: var(--brass); flex-shrink: 0; font-size: 14px; }
 
 
     /* ── DUES ── */
@@ -249,7 +257,7 @@
     <div class="hero-text-block">
       <div class="hero-eyebrow">Ballantyne · South Charlotte · Established 1989</div>
       <h1 class="hero-title">A neighborhood<br>worth calling<br><em>home.</em></h1>
-      <p class="hero-sub">Rougemont Homeowners Association, Inc. is a close-knit community of 52 homes in the heart of South Charlotte — a relaxed atmosphere with great neighbors and a location that can't be beat.</p>
+      <p class="hero-sub">Rougemont is a close-knit community of 52 homes in the heart of South Charlotte — a relaxed atmosphere with great neighbors and a location that can't be beat.</p>
       <div class="hero-actions">
         <a href="#dues" class="btn-brass">Pay Annual Dues</a>
         <a href="#purpose" class="btn-ghost">Learn More</a>
@@ -355,18 +363,55 @@
     </div>
     <div>
       <div class="ccr-doc-wrap">
-        <span class="ccr-doc-label">Official Governing Document</span>
-        <a href="./ccrs.pdf" target="_blank" rel="noopener" class="ccr-download-block">
+        <span class="ccr-doc-label">Current Governing Document</span>
+        <a href="./Rougemont_CCRs_2026_Amended_Restated.pdf" target="_blank" rel="noopener" class="ccr-download-block">
           <div class="ccr-download-icon">📋</div>
           <div>
-            <div class="ccr-download-title">Rougemont CCRs — Complete Record</div>
-            <div class="ccr-download-meta">All amendments · Recorded May 14, 2026 · Mecklenburg County Register of Deeds</div>
+            <div class="ccr-download-title">2026 Amended &amp; Restated CCRs</div>
+            <div class="ccr-download-meta">Recorded May 14, 2026 &middot; Mecklenburg County Register of Deeds &middot; Instrument No. 2026050851</div>
           </div>
           <div class="ccr-download-arrow">↗</div>
         </a>
-        <p class="ccr-doc-note">Contains the complete history of Rougemont's covenants from the original 1989 recording through the 2026 restatement.</p>
+        <p class="ccr-doc-note">The operative governing document for all 52 lots. Supersedes all prior versions.</p>
       </div>
 
+      <div class="ccr-doc-wrap">
+        <span class="ccr-doc-label">Historical Record</span>
+        <div class="ccr-doc-list">
+          <a href="./Rougemont_CCRs_1993_Ratification.pdf" target="_blank" rel="noopener" class="ccr-doc-row">
+            <div class="ccr-doc-year">1993</div>
+            <div>
+              <div class="ccr-doc-row-title">Ratification &mdash; Rougemont Associates</div>
+              <div class="ccr-doc-row-meta">Confirmed CCRs survived foreclosure &middot; Book 7477, Pages 549&ndash;551</div>
+            </div>
+            <div class="ccr-doc-row-arrow">↗</div>
+          </a>
+          <a href="./Rougemont_CCRs_1990_Amendment.pdf" target="_blank" rel="noopener" class="ccr-doc-row">
+            <div class="ccr-doc-year">1990</div>
+            <div>
+              <div class="ccr-doc-row-title">Amendment &mdash; Minimum Sq Ft &amp; Annexation</div>
+              <div class="ccr-doc-row-meta">Reduced minimum to 1,800 sq ft &middot; Annexed Sections 2 &amp; 3 &middot; Book 6210</div>
+            </div>
+            <div class="ccr-doc-row-arrow">↗</div>
+          </a>
+          <a href="./Rougemont_CCRs_1989_Original.pdf" target="_blank" rel="noopener" class="ccr-doc-row">
+            <div class="ccr-doc-year">1989</div>
+            <div>
+              <div class="ccr-doc-row-title">Original Declaration &mdash; Rice Development Corp</div>
+              <div class="ccr-doc-row-meta">Founding covenants &middot; Book 5972, Pages 580&ndash;588</div>
+            </div>
+            <div class="ccr-doc-row-arrow">↗</div>
+          </a>
+          <a href="./Rougemont_Plat_Maps.pdf" target="_blank" rel="noopener" class="ccr-doc-row">
+            <div class="ccr-doc-year">🗺</div>
+            <div>
+              <div class="ccr-doc-row-title">Recorded Plat Maps &mdash; Sections 1, 2 &amp; 3</div>
+              <div class="ccr-doc-row-meta">Lot boundaries, setbacks &amp; easements &middot; Map Books 22&ndash;23</div>
+            </div>
+            <div class="ccr-doc-row-arrow">↗</div>
+          </a>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -431,13 +476,21 @@
     </div>
   </div>
   <div class="contact-grid">
-    <div class="contact-card">
+    <div class="contact-card" style="grid-column: 1 / -1;">
       <div class="contact-icon-wrap">✉️</div>
       <div><h4>General Inquiries</h4><a href="mailto:info@rougemonthoa.org">info@rougemonthoa.org</a><p>Official inbox · all matters</p></div>
     </div>
     <div class="contact-card">
       <div class="contact-icon-wrap">🏛️</div>
       <div><h4>President</h4><a href="mailto:president@rougemonthoa.org">president@rougemonthoa.org</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon-wrap">⚖️</div>
+      <div><h4>Vice President</h4><a href="mailto:vp@rougemonthoa.org">vp@rougemonthoa.org</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon-wrap">📝</div>
+      <div><h4>Secretary</h4><a href="mailto:secretary@rougemonthoa.org">secretary@rougemonthoa.org</a></div>
     </div>
     <div class="contact-card">
       <div class="contact-icon-wrap">💰</div>
