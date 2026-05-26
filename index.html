@@ -454,6 +454,42 @@
       </div>
       <script>paypal.HostedButtons({ hostedButtonId: "U59W9QMBJMBDY" }).render("#paypal-container-U59W9QMBJMBDY")</script>
     </div>
+    <div style="margin-top:8px; border-top:1px solid rgba(255,255,255,0.08); padding-top:20px;">
+      <p style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:10px;">Paying a different amount? (2 lots, balance owed, etc.)</p>
+      <div style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+        <div style="display:flex; align-items:center; background:#fff; border-radius:4px; border:1px solid #e0dbd0; overflow:hidden; flex:1;">
+          <span style="padding:0 12px; font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--brass); font-weight:600; border-right:1px solid #e0dbd0; height:46px; display:flex; align-items:center; background:#faf9f6; flex-shrink:0;">$</span>
+          <input
+            id="dues-custom-amount"
+            type="number"
+            placeholder="100"
+            min="1"
+            step="1"
+            style="flex:1; border:none; outline:none; font-family:'Jost',sans-serif; font-size:17px; font-weight:400; color:#1A1A1A; padding:0 12px; height:46px; background:#fff; min-width:0;"
+          />
+        </div>
+        <button
+          onclick="(function(){
+            var a=parseFloat(document.getElementById('dues-custom-amount').value);
+            if(!a||a<1){alert('Please enter an amount.');return;}
+            var itemName=document.getElementById('dues-custom-note').value.trim() ? 'Rougemont+HOA+Annual+Dues+-+'+encodeURIComponent(document.getElementById('dues-custom-note').value.trim()) : 'Rougemont+HOA+Annual+Dues';
+            var url='https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=dues%40rougemonthoa.org&item_name='+itemName+'&amount='+a.toFixed(2)+'&currency_code=USD&no_note=1';
+            window.open(url,'_blank');
+          })()"
+          style="background:var(--brass); color:#fff; border:none; border-radius:4px; padding:0 18px; height:46px; font-family:'Jost',sans-serif; font-size:13px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; white-space:nowrap; flex-shrink:0;"
+          onmouseover="this.style.background='#D4A85A'"
+          onmouseout="this.style.background='var(--brass)'"
+        >Pay &rarr;</button>
+      </div>
+      <input
+        id="dues-custom-note"
+        type="text"
+        placeholder="Note (optional) — e.g. 2 lots, late fee"
+        maxlength="120"
+        style="width:100%; border:1px solid #e0dbd0; border-radius:4px; outline:none; font-family:'Jost',sans-serif; font-size:13px; font-weight:300; color:#1A1A1A; padding:0 12px; height:38px; background:#fff; box-sizing:border-box;"
+      />
+      <p style="font-size:11px; color:rgba(255,255,255,0.25); margin-top:6px; line-height:1.5;">Note will appear in the PayPal transaction record.</p>
+    </div>
     <div class="pay-methods">
       <div class="pay-method">
         <div class="pay-badge">✉️</div>
