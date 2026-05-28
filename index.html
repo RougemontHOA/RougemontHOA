@@ -19,6 +19,7 @@
       --navy: #1C2B4A; --navy-deep: #131E35; --navy-mid: #253561;
       --cream: #F5F0E8; --warm-white: #FAFAF7;
       --brass: #B8893A; --brass-light: #D4A85A;
+      --forest: #5A8F44; --forest-light: #7AB55E;
       --stone: #6B7280; --charcoal: #1A1A1A; --mid: #4A4A4A;
       --light: #9A9A9A; --border: #DDD8CE;
     }
@@ -34,9 +35,9 @@
     .nav-wordmark span { font-size: 10px; font-weight: 300; color: var(--light); letter-spacing: 0.16em; text-transform: uppercase; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a { text-decoration: none; color: var(--stone); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover { color: var(--forest); }
     .nav-btn { background: var(--navy) !important; color: #fff !important; padding: 9px 20px; border-radius: 3px; }
-    .nav-btn:hover { background: var(--navy-mid) !important; }
+    .nav-btn:hover { background: var(--forest) !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; }
     .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; z-index: 199; background: rgba(250,250,247,0.98); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); flex-direction: column; padding: 24px 32px 32px; }
@@ -51,36 +52,82 @@
     .hero-content { position: relative; z-index: 2; width: 100%; padding: 0 80px 64px; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; }
     .hero-watermark { position: absolute; z-index: 1; bottom: 180px; left: 50%; transform: translateX(-50%); font-family: 'Great Vibes', cursive; font-size: clamp(80px, 14vw, 180px); color: rgba(255,255,255,0.07); white-space: nowrap; pointer-events: none; user-select: none; letter-spacing: 0.02em; }
     .hero-text-block { background: rgba(19,30,53,0.80); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-left: 3px solid var(--brass); padding: 36px 40px 36px 36px; border-radius: 2px; max-width: 560px; flex-shrink: 0; }
-    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; }
+    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--forest-light); margin-bottom: 18px; }
     .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 70px); color: #fff; line-height: 1.08; margin-bottom: 20px; font-weight: 600; }
     .hero-title em { font-style: normal; color: var(--brass-light); font-family: 'Great Vibes', cursive; font-size: 1.15em; font-weight: 400; }
     .hero-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.75; margin-bottom: 32px; }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn-brass { background: var(--brass); color: #fff; padding: 13px 28px; border-radius: 3px; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; display: inline-block; }
-    .btn-brass:hover { background: var(--brass-light); }
+    .btn-brass:hover { background: var(--forest); }
     .btn-ghost { border: 1px solid rgba(255,255,255,0.5); color: #fff; padding: 13px 28px; border-radius: 3px; text-decoration: none; font-size: 13px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.2s; display: inline-block; }
-    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+    .btn-ghost:hover { border-color: var(--forest-light); background: rgba(90,143,68,0.15); }
     .hero-stats-block { background: rgba(19,30,53,0.80); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 28px 32px; border-radius: 2px; display: flex; flex-direction: column; gap: 20px; align-items: flex-end; flex-shrink: 0; }
     .hero-stat { text-align: right; }
     .hero-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 600; color: #fff; line-height: 1; display: block; }
     .hero-stat-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
     /* ── SHARED ── */
-    .section-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 14px; }
+    .section-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--forest); font-weight: 500; margin-bottom: 14px; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 48px); color: var(--navy); line-height: 1.15; margin-bottom: 20px; font-weight: 600; }
-    .section-title em { font-style: italic; color: var(--brass); }
+    .section-title em { font-style: italic; color: var(--forest); }
     .body-text { font-size: 16px; color: var(--mid); line-height: 1.82; font-weight: 300; }
-    .divider { width: 48px; height: 2px; background: var(--brass); margin-bottom: 28px; }
+    .divider { width: 48px; height: 2px; background: var(--forest); margin-bottom: 28px; }
 
     /* ── PURPOSE ── */
     .purpose { padding: 100px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .purpose-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
     .pillar { background: var(--warm-white); padding: 30px 26px; }
-    .pillar-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 400; color: var(--brass); line-height: 1; margin-bottom: 12px; opacity: 0.6; }
+    .pillar-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 400; color: var(--forest); line-height: 1; margin-bottom: 12px; opacity: 0.7; }
     .pillar h3 { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; color: var(--navy); }
     .pillar p { font-size: 14px; color: var(--stone); line-height: 1.65; font-weight: 300; }
 
-    /* ── HISTORY ── */
+    /* ── SCHOOLS ── */
+    .schools { padding: 100px 80px; background: var(--cream); }
+    .schools-inner { display: grid; grid-template-columns: 1fr 1.8fr; gap: 80px; align-items: start; }
+    .schools-cards { display: flex; flex-direction: column; gap: 2px; }
+    .school-card { background: #fff; padding: 28px 28px 24px; border-radius: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; transition: background 0.15s; }
+    .school-card:first-child { border-radius: 6px 6px 0 0; }
+    .school-card:last-child { border-radius: 0 0 6px 6px; }
+    .school-card:hover { background: #faf9f6; }
+    .school-badge { display: inline-block; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--forest); background: rgba(90,143,68,0.1); padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+    .school-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 5px; }
+    .school-meta { font-size: 12px; color: var(--stone); font-weight: 300; margin-bottom: 12px; }
+    .school-stats { display: flex; gap: 20px; margin-bottom: 14px; }
+    .school-stat { text-align: center; }
+    .school-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--navy); display: block; line-height: 1; }
+    .school-stat-label { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-top: 3px; display: block; }
+    .school-link { font-size: 11px; color: var(--brass); letter-spacing: 0.1em; text-decoration: none; font-weight: 500; text-transform: uppercase; }
+    .school-link:hover { color: var(--forest); }
+    .school-rating-badge { background: var(--forest); color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; width: 52px; height: 52px; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 4px; }
+    .schools-note { margin-top: 20px; background: rgba(28,43,74,0.05); border-left: 3px solid var(--forest); padding: 16px 20px; border-radius: 0 4px 4px 0; }
+    .schools-note p { font-size: 13px; color: var(--mid); line-height: 1.7; font-weight: 300; }
+    .schools-note a { color: var(--brass); text-decoration: none; font-weight: 500; }
+    .schools-note a:hover { color: var(--forest); }
+    @media (max-width: 768px) {
+      .schools { padding: 60px 24px; }
+      .schools-inner { grid-template-columns: 1fr; gap: 32px; }
+      .school-stats { gap: 14px; }
+    }
+
+
+    .resources { padding: 100px 80px; background: var(--warm-white); }
+    .resources-header { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 48px; }
+    .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .resource-card { background: #fff; padding: 28px 26px; display: flex; flex-direction: column; transition: background 0.15s; }
+    .resource-card:hover { background: var(--cream); }
+    .resource-cat { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--forest); font-weight: 500; margin-bottom: 10px; }
+    .resource-name { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 8px; }
+    .resource-desc { font-size: 13px; color: var(--stone); line-height: 1.7; font-weight: 300; flex: 1; margin-bottom: 18px; }
+    .resource-link { font-size: 11px; color: var(--brass); letter-spacing: 0.1em; text-decoration: none; font-weight: 500; text-transform: uppercase; display: inline-flex; align-items: center; gap: 5px; }
+    .resource-link:hover { color: var(--forest); }
+    @media (max-width: 768px) {
+      .resources { padding: 60px 24px; }
+      .resources-header { grid-template-columns: 1fr; gap: 0; margin-bottom: 32px; }
+      .resources-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) { .resources-grid { grid-template-columns: 1fr; } }
+
+
     .history { background: var(--navy); padding: 100px 80px; }
     .history-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
     .history .section-label { color: var(--brass-light); }
@@ -105,7 +152,7 @@
     .ccr-doc-wrap { margin-bottom: 32px; }
     .ccr-doc-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light); margin-bottom: 14px; font-weight: 500; display: block; }
     .ccr-download-block { display: flex; align-items: center; gap: 20px; padding: 26px 26px; background: var(--navy); border: 2px solid var(--brass); border-radius: 6px; text-decoration: none; color: #fff; transition: background 0.2s, border-color 0.2s; }
-    .ccr-download-block:hover { background: var(--navy-mid); border-color: var(--brass-light); }
+    .ccr-download-block:hover { background: var(--forest); border-color: var(--forest-light); }
     .ccr-download-icon { font-size: 26px; flex-shrink: 0; }
     .ccr-download-title { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 5px; }
     .ccr-download-meta { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 300; line-height: 1.5; }
@@ -114,7 +161,7 @@
     .ccr-doc-list { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
     .ccr-doc-row { display: flex; align-items: center; gap: 16px; padding: 15px 18px; background: var(--warm-white); text-decoration: none; border-bottom: 1px solid var(--border); transition: background 0.2s; }
     .ccr-doc-row:last-child { border-bottom: none; }
-    .ccr-doc-row:hover { background: var(--cream); }
+    .ccr-doc-row:hover { background: rgba(90,143,68,0.06); }
     .ccr-doc-year { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; color: var(--brass); width: 34px; flex-shrink: 0; text-align: center; line-height: 1.2; }
     .ccr-doc-row-title { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 3px; }
     .ccr-doc-row-meta { font-size: 12px; color: var(--stone); font-weight: 300; line-height: 1.5; }
@@ -143,15 +190,38 @@
     .fund-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; font-size: 15px; color: var(--mid); font-weight: 300; }
     .fund-dash { color: var(--brass); flex-shrink: 0; font-weight: 500; }
 
-    /* ── CONTACT ── */
+    /* ── NEWS FEED ── */
+    .news { padding: 100px 80px; background: var(--navy); }
+    .news-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
+    .news .section-label { color: var(--brass-light); }
+    .news .section-title { color: #fff; }
+    .news .body-text { color: rgba(255,255,255,0.55); }
+    .news .divider { background: var(--brass-light); }
+    .news-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden; }
+    .news-card { background: rgba(255,255,255,0.04); padding: 24px; display: flex; flex-direction: column; transition: background 0.15s; text-decoration: none; }
+    .news-card:hover { background: rgba(255,255,255,0.09); }
+    .news-source { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-light); font-weight: 500; margin-bottom: 10px; }
+    .news-headline { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #fff; line-height: 1.35; margin-bottom: 12px; flex: 1; }
+    .news-date { font-size: 11px; color: rgba(255,255,255,0.3); font-weight: 300; letter-spacing: 0.04em; }
+    .news-arrow { font-size: 13px; color: var(--brass-light); margin-top: 14px; }
+    .news-loading { grid-column: 1/-1; text-align: center; padding: 48px 24px; color: rgba(255,255,255,0.3); font-size: 14px; font-weight: 300; letter-spacing: 0.06em; }
+    .news-refresh { margin-top: 20px; display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; background: none; border: none; padding: 0; transition: color 0.2s; }
+    .news-refresh:hover { color: var(--brass-light); }
+    @media (max-width: 900px) {
+      .news { padding: 60px 24px; }
+      .news-inner { grid-template-columns: 1fr; gap: 32px; }
+      .news-cards { grid-template-columns: 1fr; }
+    }
+
+
     .contact { background: var(--cream); padding: 100px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .contact-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 4px; padding: 22px 24px; display: flex; align-items: flex-start; gap: 16px; transition: border-color 0.2s; }
-    .contact-card:hover { border-color: var(--brass); }
+    .contact-card:hover { border-color: var(--forest); }
     .contact-icon-wrap { width: 42px; height: 42px; border-radius: 4px; background: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
     .contact-card h4 { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--light); margin-bottom: 5px; font-weight: 500; }
     .contact-card a { color: var(--navy); text-decoration: none; font-size: 14px; font-weight: 500; word-break: break-all; }
-    .contact-card a:hover { color: var(--brass); }
+    .contact-card a:hover { color: var(--forest); }
     .contact-card p { font-size: 13px; color: var(--stone); margin-top: 3px; font-weight: 300; }
 
     /* ── FOOTER ── */
@@ -164,7 +234,7 @@
     .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 280px; font-weight: 300; }
     .footer-col h4 { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; font-weight: 500; }
     .footer-col a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; margin-bottom: 10px; font-weight: 300; transition: color 0.2s; }
-    .footer-col a:hover { color: #fff; }
+    .footer-col a:hover { color: var(--forest-light); }
     .footer-col span { display: block; color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 10px; font-weight: 300; }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.25); font-weight: 300; flex-wrap: wrap; gap: 8px; }
 
@@ -232,6 +302,9 @@
     <a href="#history">History</a>
     <a href="#governance">Governance</a>
     <a href="#dues">Dues</a>
+    <a href="#schools">Schools</a>
+    <a href="#schools">Schools</a>
+      <a href="#resources">Local Resources</a>
     <a href="#contact" class="nav-btn">Contact</a>
   </div>
   <button type="button" class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
@@ -245,6 +318,8 @@
   <a href="#history"    onclick="document.getElementById('mobileMenu').classList.remove('open')">History</a>
   <a href="#governance" onclick="document.getElementById('mobileMenu').classList.remove('open')">Governance</a>
   <a href="#dues"       onclick="document.getElementById('mobileMenu').classList.remove('open')">Dues</a>
+  <a href="#schools"    onclick="document.getElementById('mobileMenu').classList.remove('open')">Schools</a>
+  <a href="#resources"  onclick="document.getElementById('mobileMenu').classList.remove('open')">Local Resources</a>
   <a href="#contact"    onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
 </div>
 
@@ -285,6 +360,188 @@
     <div class="pillar"><div class="pillar-num">02</div><h3>Common Areas</h3><p>Entrance landscaping, lighting, and year-round maintenance.</p></div>
     <div class="pillar"><div class="pillar-num">03</div><h3>Community</h3><p>Welcoming new neighbors and fostering a close-knit atmosphere.</p></div>
     <div class="pillar"><div class="pillar-num">04</div><h3>Governance</h3><p>Clear, fair covenants and transparent financial stewardship.</p></div>
+  </div>
+</section>
+
+<!-- SCHOOLS -->
+<section class="schools" id="schools">
+  <div class="schools-inner">
+    <div>
+      <div class="section-label">CMS Schools</div>
+      <h2 class="section-title">Top-rated<br><em>public schools</em></h2>
+      <div class="divider"></div>
+      <p class="body-text">Rougemont feeds into three Charlotte-Mecklenburg schools — including the brand-new <strong style="color:var(--navy)">Ballantyne Ridge High School</strong>, a state-of-the-art $159M facility that opened in fall 2024.</p>
+      <p class="body-text" style="margin-top:16px;">All three assigned schools hold a <strong style="color:var(--navy)">Grade B from NC DPI</strong>, with Endhaven and South Charlotte Middle both exceeding growth targets. School data sourced from the official Mecklenburg County GeoPortal.</p>
+      <div class="schools-note" style="margin-top:28px;">
+        <p>*Data from 2023–24 school year, NC Department of Public Instruction via Mecklenburg County GeoPortal. School assignments can change — always verify your specific address.</p>
+      </div>
+      <a href="https://maps.mecklenburgcountync.gov/geoportal/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:20px; background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px; text-decoration:none; font-family:'Jost',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; transition:background 0.2s;" onmouseover="this.style.background='var(--forest)'" onmouseout="this.style.background='var(--navy)'">&#9655; Look Up Your Address on Mecklenburg GeoPortal</a>
+    </div>
+
+    <div>
+      <div class="schools-cards">
+
+        <!-- Elementary -->
+        <div class="school-card">
+          <div>
+            <div class="school-badge">Elementary · PK–5</div>
+            <div class="school-name">Endhaven Elementary</div>
+            <div class="school-meta">6815 Endhaven Ln, Charlotte, NC 28277 &nbsp;·&nbsp; ~756 students</div>
+            <div class="school-stats">
+              <div class="school-stat">
+                <span class="school-stat-num">66.3%</span>
+                <span class="school-stat-label">Proficiency*</span>
+              </div>
+              <div class="school-stat">
+                <span class="school-stat-num">Exceeded</span>
+                <span class="school-stat-label">Growth Status*</span>
+              </div>
+              <div class="school-stat">
+                <span class="school-stat-num">B</span>
+                <span class="school-stat-label">NC Grade*</span>
+              </div>
+            </div>
+            <a href="https://endhavenes.cmsk12.org" target="_blank" class="school-link">School Website &#8594;</a>
+          </div>
+          <div class="school-rating-badge">B</div>
+        </div>
+
+        <!-- Middle -->
+        <div class="school-card">
+          <div>
+            <div class="school-badge">Middle School · 6–8</div>
+            <div class="school-name">South Charlotte Middle</div>
+            <div class="school-meta">8040 Strawberry Lane, Charlotte, NC 28277 &nbsp;·&nbsp; 2.3 miles</div>
+            <div class="school-stats">
+              <div class="school-stat">
+                <span class="school-stat-num">74.4%</span>
+                <span class="school-stat-label">Proficiency*</span>
+              </div>
+              <div class="school-stat">
+                <span class="school-stat-num">Exceeded</span>
+                <span class="school-stat-label">Growth Status*</span>
+              </div>
+              <div class="school-stat">
+                <span class="school-stat-num">B</span>
+                <span class="school-stat-label">NC Grade*</span>
+              </div>
+            </div>
+            <a href="https://southcharlottems.cmsk12.org" target="_blank" class="school-link">School Website &#8594;</a>
+          </div>
+          <div class="school-rating-badge">B</div>
+        </div>
+
+        <!-- High School -->
+        <div class="school-card">
+          <div>
+            <div class="school-badge">High School · 9–12</div>
+            <div class="school-name">Ballantyne Ridge High School</div>
+            <div class="school-meta">4004 Toringdon Way, Charlotte, NC 28277 &nbsp;·&nbsp; ~1,414 students</div>
+            <div class="school-stats">
+              <div class="school-stat">
+                <span class="school-stat-num">2024</span>
+                <span class="school-stat-label">Year Opened</span>
+              </div>
+              <div class="school-stat">
+                <span class="school-stat-num">$159M</span>
+                <span class="school-stat-label">New Facility</span>
+              </div>
+              <div class="school-stat">
+                <span class="school-stat-num">2,500</span>
+                <span class="school-stat-label">Student Capacity</span>
+              </div>
+            </div>
+            <p style="font-size:12px; color:var(--stone); font-weight:300; line-height:1.6; margin-bottom:14px;">Brand new $159M facility opened August 2024. Academic performance data not yet available — first graduating class 2026.</p>
+            <a href="https://ballantyneridgehs.cmsk12.org" target="_blank" class="school-link">School Website &#8594;</a>
+          </div>
+          <div class="school-rating-badge" style="font-size:13px; letter-spacing:-0.02em;">New</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL RESOURCES -->
+<section class="resources" id="resources">
+  <div class="resources-header">
+    <div>
+      <div class="section-label">South Charlotte</div>
+      <h2 class="section-title">Around<br><em>the neighborhood</em></h2>
+      <div class="divider"></div>
+    </div>
+    <p class="body-text">A few local favorites and essential resources for Rougemont residents and prospective buyers — from dining and parks to utilities and county services.</p>
+  </div>
+  <div class="resources-grid">
+
+    <!-- Dining & Entertainment -->
+    <div class="resource-card">
+      <div class="resource-cat">Dining &amp; Entertainment</div>
+      <div class="resource-name">The Bowl at Ballantyne</div>
+      <div class="resource-desc">15+ restaurants, The Amp concert venue, and walkable outdoor green space — Charlotte's newest dining and entertainment district, right in our backyard.</div>
+      <a href="https://thebowlnc.com/" target="_blank" class="resource-link">Visit &#8594;</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-cat">Dining &amp; Entertainment</div>
+      <div class="resource-name">Waverly</div>
+      <div class="resource-desc">Upscale dining, boutique retail, and regular live music events in the heart of South Charlotte. A go-to for date nights and weekend outings.</div>
+      <a href="https://www.waverlyclt.com/" target="_blank" class="resource-link">Visit &#8594;</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-cat">Shopping &amp; Dining</div>
+      <div class="resource-name">Blakeney Town Center</div>
+      <div class="resource-desc">South Charlotte's most-loved gathering spot — Harris Teeter, Target, dozens of shops and restaurants, and a splash pad for the kids.</div>
+      <a href="https://www.shopblakeney.com/" target="_blank" class="resource-link">Visit &#8594;</a>
+    </div>
+
+    <!-- Parks & Outdoors -->
+    <div class="resource-card">
+      <div class="resource-cat">Parks &amp; Outdoors</div>
+      <div class="resource-name">Ballantyne's Backyard</div>
+      <div class="resource-desc">100+ acres of green space on the former Ballantyne golf course. Walking trails, rolling hills, catch-and-release ponds, and monthly outdoor markets.</div>
+      <a href="https://www.goballantyne.com/things-to-do/explore/ballantynes-backyard" target="_blank" class="resource-link">Explore &#8594;</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-cat">Parks &amp; Outdoors</div>
+      <div class="resource-name">Ballantyne District Park</div>
+      <div class="resource-desc">91 acres with 3 miles of mountain bike trails, soccer and baseball fields, picnic shelters, and playgrounds — operated by Mecklenburg County.</div>
+      <a href="https://www.mecknc.gov/ParkandRec/Parks/ParksByRegion/SouthRegion/Pages/Ballantyne.aspx" target="_blank" class="resource-link">Explore &#8594;</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-cat">Parks &amp; Outdoors</div>
+      <div class="resource-name">Ballantyne Community Park</div>
+      <div class="resource-desc">Well-maintained walking and running trails at 10082 Community House Rd. A neighborhood staple for casual strolls, exercise, and fresh air year-round.</div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Ballantyne+Community+Park+Charlotte+NC" target="_blank" class="resource-link">Directions &#8594;</a>
+    </div>
+
+    <!-- Utilities & Services -->
+    <div class="resource-card">
+      <div class="resource-cat">City Services</div>
+      <div class="resource-name">CharMeck 311 / CLT+</div>
+      <div class="resource-desc">Charlotte-Mecklenburg's resident services hub — report potholes, schedule bulky trash pickup, and flag code violations. Call 311, use the free CLT+ app, or submit online.</div>
+      <a href="https://www.charlottenc.gov/Help311" target="_blank" class="resource-link">311 Online &#8594;</a>
+      &nbsp;&nbsp;
+      <a href="https://www.charlottenc.gov/City-Government/News-Updates/Get-the-CLT-App" target="_blank" class="resource-link">CLT+ App &#8594;</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-cat">Travel</div>
+      <div class="resource-name">Charlotte Douglas Airport</div>
+      <div class="resource-desc">One of the busiest airports in the country, just 20 minutes from Rougemont. Flight info, parking, terminal maps, and the CLT Fly Smart app at cltairport.com.</div>
+      <a href="https://www.cltairport.com/" target="_blank" class="resource-link">Visit &#8594;</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-cat">County Resources</div>
+      <div class="resource-name">Mecklenburg County</div>
+      <div class="resource-desc">Property records, tax information, parks and recreation, public health, and county services for all Mecklenburg residents at mecknc.gov.</div>
+      <a href="https://www.mecknc.gov/" target="_blank" class="resource-link">Visit &#8594;</a>
+    </div>
+
   </div>
 </section>
 
@@ -477,7 +734,7 @@
             window.open(url,'_blank');
           })()"
           style="background:var(--brass); color:#fff; border:none; border-radius:4px; padding:0 18px; height:46px; font-family:'Jost',sans-serif; font-size:13px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; white-space:nowrap; flex-shrink:0;"
-          onmouseover="this.style.background='#D4A85A'"
+          onmouseover="this.style.background='var(--forest)'"
           onmouseout="this.style.background='var(--brass)'"
         >Pay &rarr;</button>
       </div>
@@ -498,6 +755,99 @@
     </div>
   </div>
 </div>
+
+<!-- NEWS FEED -->
+<section class="news" id="news">
+  <div class="news-inner">
+    <div>
+      <div class="section-label">Local News</div>
+      <h2 class="section-title">Charlotte<br><em>headlines</em></h2>
+      <div class="divider"></div>
+      <p class="body-text">Recent news from Charlotte and the surrounding area, pulled fresh from local stations on each page load.</p>
+      <button class="news-refresh" onclick="loadNews()">&#8635; Refresh</button>
+    </div>
+    <div>
+      <div class="news-cards" id="news-cards">
+        <div class="news-loading">Loading local headlines&hellip;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var FEEDS = [
+    { url: 'https://www.wcnc.com/feeds/syndication/rss/news/', source: 'WCNC Charlotte' },
+    { url: 'https://www.wsoctv.com/feeds/syndication/rss/news/', source: 'WSOC-TV' }
+  ];
+
+  var KEYWORDS = [
+    'ballantyne','south charlotte','mecklenburg','charlotte','pineville',
+    'matthews','ballantyne ridge','cms school','28277'
+  ];
+
+  function parseDate(str) {
+    var d = new Date(str);
+    if (isNaN(d)) return '';
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function isRelevant(item) {
+    var text = ((item.title || '') + ' ' + (item.description || '')).toLowerCase();
+    return KEYWORDS.some(function(k) { return text.indexOf(k) !== -1; });
+  }
+
+  function renderCards(items) {
+    var container = document.getElementById('news-cards');
+    if (!items || items.length === 0) {
+      container.innerHTML = '<div class="news-loading">No local headlines found right now — check back later.</div>';
+      return;
+    }
+    container.innerHTML = items.slice(0, 3).map(function(item) {
+      return '<a href="' + item.link + '" target="_blank" rel="noopener" class="news-card">' +
+        '<div class="news-source">' + (item.source || 'Charlotte News') + '</div>' +
+        '<div class="news-headline">' + item.title + '</div>' +
+        '<div class="news-date">' + parseDate(item.pubDate) + '</div>' +
+        '<div class="news-arrow">Read more &rarr;</div>' +
+        '</a>';
+    }).join('');
+  }
+
+  function fetchFeed(feed) {
+    var apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' +
+      encodeURIComponent(feed.url) + '&count=20';
+    return fetch(apiUrl)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        return (data.items || []).map(function(item) {
+          item.source = feed.source;
+          return item;
+        });
+      })
+      .catch(function() { return []; });
+  }
+
+  window.loadNews = function() {
+    document.getElementById('news-cards').innerHTML =
+      '<div class="news-loading">Loading local headlines&hellip;</div>';
+
+    Promise.all(FEEDS.map(fetchFeed)).then(function(results) {
+      var all = [].concat.apply([], results);
+      // Prefer locally relevant items, fall back to any Charlotte news
+      var relevant = all.filter(isRelevant);
+      var items = relevant.length >= 3 ? relevant : all;
+      // Sort by date descending
+      items.sort(function(a, b) { return new Date(b.pubDate) - new Date(a.pubDate); });
+      renderCards(items);
+    }).catch(function() {
+      document.getElementById('news-cards').innerHTML =
+        '<div class="news-loading">Unable to load headlines right now.</div>';
+    });
+  };
+
+  window.loadNews();
+})();
+</script>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -573,8 +923,11 @@
     <div class="footer-col">
       <h4>Navigate</h4>
       <a href="#purpose">About</a>
+      <a href="#schools">Schools</a>
+      <a href="#resources">Local Resources</a>
       <a href="#history">History</a>
       <a href="#governance">Governance</a>
+      <a href="#news">News</a>
       <a href="#dues">Pay Dues</a>
       <a href="#contact">Contact</a>
     </div>
