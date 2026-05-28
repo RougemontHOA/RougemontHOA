@@ -190,31 +190,8 @@
     .fund-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; font-size: 15px; color: var(--mid); font-weight: 300; }
     .fund-dash { color: var(--brass); flex-shrink: 0; font-weight: 500; }
 
-    /* ── NEWS FEED ── */
-    .news { padding: 100px 80px; background: var(--navy); }
-    .news-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
-    .news .section-label { color: var(--brass-light); }
-    .news .section-title { color: #fff; }
-    .news .body-text { color: rgba(255,255,255,0.55); }
-    .news .divider { background: var(--brass-light); }
-    .news-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden; }
-    .news-card { background: rgba(255,255,255,0.04); padding: 24px; display: flex; flex-direction: column; transition: background 0.15s; text-decoration: none; }
-    .news-card:hover { background: rgba(255,255,255,0.09); }
-    .news-source { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-light); font-weight: 500; margin-bottom: 10px; }
-    .news-headline { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #fff; line-height: 1.35; margin-bottom: 12px; flex: 1; }
-    .news-date { font-size: 11px; color: rgba(255,255,255,0.3); font-weight: 300; letter-spacing: 0.04em; }
-    .news-arrow { font-size: 13px; color: var(--brass-light); margin-top: 14px; }
-    .news-loading { grid-column: 1/-1; text-align: center; padding: 48px 24px; color: rgba(255,255,255,0.3); font-size: 14px; font-weight: 300; letter-spacing: 0.06em; }
-    .news-refresh { margin-top: 20px; display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; background: none; border: none; padding: 0; transition: color 0.2s; }
-    .news-refresh:hover { color: var(--brass-light); }
-    @media (max-width: 900px) {
-      .news { padding: 60px 24px; }
-      .news-inner { grid-template-columns: 1fr; gap: 32px; }
-      .news-cards { grid-template-columns: 1fr; }
-    }
 
-
-    .contact { background: var(--cream); padding: 100px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact { background: var(--cream); padding: 100px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .contact-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 4px; padding: 22px 24px; display: flex; align-items: flex-start; gap: 16px; transition: border-color 0.2s; }
     .contact-card:hover { border-color: var(--forest); }
@@ -299,12 +276,11 @@
   </a>
   <div class="nav-links">
     <a href="#purpose">About</a>
+    <a href="#schools">Schools</a>
+    <a href="#resources">Local Resources</a>
     <a href="#history">History</a>
     <a href="#governance">Governance</a>
-    <a href="#dues">Dues</a>
-    <a href="#schools">Schools</a>
-    <a href="#schools">Schools</a>
-      <a href="#resources">Local Resources</a>
+    <a href="#dues" class="nav-btn" style="background:var(--forest);">Pay Dues</a>
     <a href="#contact" class="nav-btn">Contact</a>
   </div>
   <button type="button" class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
@@ -315,11 +291,11 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#purpose"    onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
-  <a href="#history"    onclick="document.getElementById('mobileMenu').classList.remove('open')">History</a>
-  <a href="#governance" onclick="document.getElementById('mobileMenu').classList.remove('open')">Governance</a>
-  <a href="#dues"       onclick="document.getElementById('mobileMenu').classList.remove('open')">Dues</a>
   <a href="#schools"    onclick="document.getElementById('mobileMenu').classList.remove('open')">Schools</a>
   <a href="#resources"  onclick="document.getElementById('mobileMenu').classList.remove('open')">Local Resources</a>
+  <a href="#history"    onclick="document.getElementById('mobileMenu').classList.remove('open')">History</a>
+  <a href="#governance" onclick="document.getElementById('mobileMenu').classList.remove('open')">Governance</a>
+  <a href="#dues"       onclick="document.getElementById('mobileMenu').classList.remove('open')" style="background:var(--forest) !important; color:#fff !important; margin-top:8px; padding:14px 20px; border-radius:3px; text-align:center; border-bottom:none;">Pay Dues</a>
   <a href="#contact"    onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
 </div>
 
@@ -371,9 +347,9 @@
       <h2 class="section-title">Top-rated<br><em>public schools</em></h2>
       <div class="divider"></div>
       <p class="body-text">Rougemont feeds into three Charlotte-Mecklenburg schools — including the brand-new <strong style="color:var(--navy)">Ballantyne Ridge High School</strong>, a state-of-the-art $159M facility that opened in fall 2024.</p>
-      <p class="body-text" style="margin-top:16px;">All three assigned schools hold a <strong style="color:var(--navy)">Grade B from NC DPI</strong>, with Endhaven and South Charlotte Middle both exceeding growth targets. School data sourced from the official Mecklenburg County GeoPortal.</p>
+      <p class="body-text" style="margin-top:16px;">All three assigned schools hold a <strong style="color:var(--navy)">Grade B from NC DPI</strong>, with Endhaven and South Charlotte Middle both exceeding growth targets. Proficiency figures are 3-year averages (2021-22 through 2023-24) per NC DPI.</p>
       <div class="schools-note" style="margin-top:28px;">
-        <p>*Data from 2023–24 school year, NC Department of Public Instruction via Mecklenburg County GeoPortal. School assignments can change — always verify your specific address.</p>
+        <p>¹ 3-year average (2021-22 through 2023-24), NC Dept. of Public Instruction via U.S. News. NC Grade from 2023-24 school year via Mecklenburg County GeoPortal. School assignments can change — always verify your specific address.</p>
       </div>
       <a href="https://maps.mecklenburgcountync.gov/geoportal/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:20px; background:var(--navy); color:#fff; padding:12px 20px; border-radius:4px; text-decoration:none; font-family:'Jost',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; transition:background 0.2s;" onmouseover="this.style.background='var(--forest)'" onmouseout="this.style.background='var(--navy)'">&#9655; Look Up Your Address on Mecklenburg GeoPortal</a>
     </div>
@@ -389,16 +365,16 @@
             <div class="school-meta">6815 Endhaven Ln, Charlotte, NC 28277 &nbsp;·&nbsp; ~756 students</div>
             <div class="school-stats">
               <div class="school-stat">
-                <span class="school-stat-num">66.3%</span>
-                <span class="school-stat-label">Proficiency*</span>
+                <span class="school-stat-num">61%</span>
+                <span class="school-stat-label">Math · 3-yr avg¹</span>
               </div>
               <div class="school-stat">
-                <span class="school-stat-num">Exceeded</span>
-                <span class="school-stat-label">Growth Status*</span>
+                <span class="school-stat-num">59%</span>
+                <span class="school-stat-label">Reading · 3-yr avg¹</span>
               </div>
               <div class="school-stat">
                 <span class="school-stat-num">B</span>
-                <span class="school-stat-label">NC Grade*</span>
+                <span class="school-stat-label">NC Grade 2023-24</span>
               </div>
             </div>
             <a href="https://endhavenes.cmsk12.org" target="_blank" class="school-link">School Website &#8594;</a>
@@ -414,16 +390,16 @@
             <div class="school-meta">8040 Strawberry Lane, Charlotte, NC 28277 &nbsp;·&nbsp; 2.3 miles</div>
             <div class="school-stats">
               <div class="school-stat">
-                <span class="school-stat-num">74.4%</span>
-                <span class="school-stat-label">Proficiency*</span>
+                <span class="school-stat-num">71%</span>
+                <span class="school-stat-label">Math · 3-yr avg¹</span>
               </div>
               <div class="school-stat">
-                <span class="school-stat-num">Exceeded</span>
-                <span class="school-stat-label">Growth Status*</span>
+                <span class="school-stat-num">66%</span>
+                <span class="school-stat-label">Reading · 3-yr avg¹</span>
               </div>
               <div class="school-stat">
                 <span class="school-stat-num">B</span>
-                <span class="school-stat-label">NC Grade*</span>
+                <span class="school-stat-label">NC Grade 2023-24</span>
               </div>
             </div>
             <a href="https://southcharlottems.cmsk12.org" target="_blank" class="school-link">School Website &#8594;</a>
@@ -756,99 +732,6 @@
   </div>
 </div>
 
-<!-- NEWS FEED -->
-<section class="news" id="news">
-  <div class="news-inner">
-    <div>
-      <div class="section-label">Local News</div>
-      <h2 class="section-title">Charlotte<br><em>headlines</em></h2>
-      <div class="divider"></div>
-      <p class="body-text">Recent news from Charlotte and the surrounding area, pulled fresh from local stations on each page load.</p>
-      <button class="news-refresh" onclick="loadNews()">&#8635; Refresh</button>
-    </div>
-    <div>
-      <div class="news-cards" id="news-cards">
-        <div class="news-loading">Loading local headlines&hellip;</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-(function() {
-  var FEEDS = [
-    { url: 'https://www.wcnc.com/feeds/syndication/rss/news/', source: 'WCNC Charlotte' },
-    { url: 'https://www.wsoctv.com/feeds/syndication/rss/news/', source: 'WSOC-TV' }
-  ];
-
-  var KEYWORDS = [
-    'ballantyne','south charlotte','mecklenburg','charlotte','pineville',
-    'matthews','ballantyne ridge','cms school','28277'
-  ];
-
-  function parseDate(str) {
-    var d = new Date(str);
-    if (isNaN(d)) return '';
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  }
-
-  function isRelevant(item) {
-    var text = ((item.title || '') + ' ' + (item.description || '')).toLowerCase();
-    return KEYWORDS.some(function(k) { return text.indexOf(k) !== -1; });
-  }
-
-  function renderCards(items) {
-    var container = document.getElementById('news-cards');
-    if (!items || items.length === 0) {
-      container.innerHTML = '<div class="news-loading">No local headlines found right now — check back later.</div>';
-      return;
-    }
-    container.innerHTML = items.slice(0, 3).map(function(item) {
-      return '<a href="' + item.link + '" target="_blank" rel="noopener" class="news-card">' +
-        '<div class="news-source">' + (item.source || 'Charlotte News') + '</div>' +
-        '<div class="news-headline">' + item.title + '</div>' +
-        '<div class="news-date">' + parseDate(item.pubDate) + '</div>' +
-        '<div class="news-arrow">Read more &rarr;</div>' +
-        '</a>';
-    }).join('');
-  }
-
-  function fetchFeed(feed) {
-    var apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' +
-      encodeURIComponent(feed.url) + '&count=20';
-    return fetch(apiUrl)
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        return (data.items || []).map(function(item) {
-          item.source = feed.source;
-          return item;
-        });
-      })
-      .catch(function() { return []; });
-  }
-
-  window.loadNews = function() {
-    document.getElementById('news-cards').innerHTML =
-      '<div class="news-loading">Loading local headlines&hellip;</div>';
-
-    Promise.all(FEEDS.map(fetchFeed)).then(function(results) {
-      var all = [].concat.apply([], results);
-      // Prefer locally relevant items, fall back to any Charlotte news
-      var relevant = all.filter(isRelevant);
-      var items = relevant.length >= 3 ? relevant : all;
-      // Sort by date descending
-      items.sort(function(a, b) { return new Date(b.pubDate) - new Date(a.pubDate); });
-      renderCards(items);
-    }).catch(function() {
-      document.getElementById('news-cards').innerHTML =
-        '<div class="news-loading">Unable to load headlines right now.</div>';
-    });
-  };
-
-  window.loadNews();
-})();
-</script>
-
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div>
@@ -927,7 +810,6 @@
       <a href="#resources">Local Resources</a>
       <a href="#history">History</a>
       <a href="#governance">Governance</a>
-      <a href="#news">News</a>
       <a href="#dues">Pay Dues</a>
       <a href="#contact">Contact</a>
     </div>
