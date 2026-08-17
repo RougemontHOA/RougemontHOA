@@ -201,6 +201,28 @@
     .contact-card a:hover { color: var(--forest); }
     .contact-card p { font-size: 13px; color: var(--stone); margin-top: 3px; font-weight: 300; }
 
+    /* ── BOARD & MEETINGS ── */
+    .board-section { padding: 100px 80px; }
+    .board-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .board-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
+    .board-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 4px; padding: 22px 24px; transition: border-color 0.2s; }
+    .board-card:hover { border-color: var(--forest); }
+    .board-card .board-role { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--forest); font-weight: 500; margin-bottom: 6px; }
+    .board-card .board-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); line-height: 1.2; }
+    .board-note { margin-top: 20px; background: rgba(28,43,74,0.05); border-left: 3px solid var(--forest); padding: 16px 20px; border-radius: 0 4px 4px 0; font-size: 13px; color: var(--stone); font-weight: 300; line-height: 1.7; }
+    .meeting-list { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
+    .meeting-row { background: #fff; border: 1px solid var(--border); padding: 18px 22px; display: flex; align-items: center; gap: 18px; }
+    .meeting-row:first-child { border-radius: 6px 6px 0 0; }
+    .meeting-row:last-child { border-radius: 0 0 6px 6px; }
+    .meeting-row + .meeting-row { border-top: none; }
+    .meeting-quarter { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: var(--brass); width: 62px; flex-shrink: 0; }
+    .meeting-date { font-size: 15px; color: var(--navy); font-weight: 500; }
+    @media (max-width: 900px) {
+      .board-section { padding: 64px 24px; }
+      .board-inner { grid-template-columns: 1fr; gap: 40px; }
+      .board-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── FOOTER ── */
     footer { background: var(--navy-deep); padding: 56px 80px 36px; }
     .footer-brass-line { width: 48px; height: 2px; background: var(--brass); margin-bottom: 40px; }
@@ -280,6 +302,7 @@
     <a href="#resources">Local Resources</a>
     <a href="#history">History</a>
     <a href="#governance">Governance</a>
+    <a href="#board">Board</a>
     <a href="#dues" class="nav-btn" style="background:var(--forest);">Pay Dues</a>
     <a href="#contact" class="nav-btn">Contact</a>
   </div>
@@ -295,6 +318,7 @@
   <a href="#resources"  onclick="document.getElementById('mobileMenu').classList.remove('open')">Local Resources</a>
   <a href="#history"    onclick="document.getElementById('mobileMenu').classList.remove('open')">History</a>
   <a href="#governance" onclick="document.getElementById('mobileMenu').classList.remove('open')">Governance</a>
+  <a href="#board" onclick="document.getElementById('mobileMenu').classList.remove('open')">Board</a>
   <a href="#dues"       onclick="document.getElementById('mobileMenu').classList.remove('open')" style="background:var(--forest) !important; color:#fff !important; margin-top:8px; padding:14px 20px; border-radius:3px; text-align:center; border-bottom:none;">Pay Dues</a>
   <a href="#contact"    onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
 </div>
@@ -650,6 +674,36 @@
   </div>
 </section>
 
+<!-- BOARD & MEETINGS -->
+<section class="board-section" id="board">
+  <div class="board-inner">
+    <div>
+      <div class="section-label">Leadership</div>
+      <h2 class="section-title">Your Board of<br><em>Directors</em></h2>
+      <div class="divider"></div>
+      <p class="body-text">Rougemont HOA is governed by a volunteer Board of Directors and appointed officers, elected in accordance with the Association's Bylaws.</p>
+      <div class="board-grid">
+        <div class="board-card"><div class="board-role">President</div><div class="board-name">Serina DelGuzzo</div></div>
+        <div class="board-card"><div class="board-role">Vice President</div><div class="board-name">Wes Parsons</div></div>
+        <div class="board-card"><div class="board-role">Treasurer</div><div class="board-name">Tyler Carter</div></div>
+        <div class="board-card"><div class="board-role">Secretary</div><div class="board-name">Liz Prytyskach</div></div>
+      </div>
+      <div class="board-note">Board makeup current as of the August 17, 2026 Special Board of Directors meeting, published within 30 days per Bylaws Article V, Section 2.</div>
+    </div>
+    <div>
+      <div class="section-label">Stay Informed</div>
+      <h2 class="section-title">Upcoming<br><em>Board Meetings</em></h2>
+      <div class="divider"></div>
+      <p class="body-text">Regular quarterly Board of Directors meetings are open to Members. Dates below are confirmed — check <a href="mailto:info@rougemonthoa.org" style="color:var(--brass);text-decoration:none;font-weight:500">info@rougemonthoa.org</a> for location and time details closer to each date.</p>
+      <div class="meeting-list">
+        <div class="meeting-row"><span class="meeting-quarter">Q4 2026</span><span class="meeting-date">October 18, 2026</span></div>
+        <div class="meeting-row"><span class="meeting-quarter">Q1 2027</span><span class="meeting-date">January 17, 2027</span></div>
+        <div class="meeting-row"><span class="meeting-quarter">Q2 2027</span><span class="meeting-date">April 18, 2027</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DUES -->
 <div class="dues-wrap" id="dues">
   <div class="dues-left">
@@ -810,6 +864,7 @@
       <a href="#resources">Local Resources</a>
       <a href="#history">History</a>
       <a href="#governance">Governance</a>
+      <a href="#board">Board</a>
       <a href="#dues">Pay Dues</a>
       <a href="#contact">Contact</a>
     </div>
